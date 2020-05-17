@@ -1,0 +1,6 @@
+SELECT PACKAGE(T)
+FROM trades T
+SUCH THAT
+SUM(price) <= 1000 AND
+SUM(gain) >= 10
+MAXIMIZE SUM(gain);
