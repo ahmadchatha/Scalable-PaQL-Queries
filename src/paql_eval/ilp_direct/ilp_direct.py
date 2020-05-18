@@ -119,7 +119,8 @@ class ILPDirect(Search):
         # Settings
         ilp_solver_interface = kwargs.get("ilp_solver_interface", ILPPackageProblemCplexPy)
         assert inspect.isclass(ilp_solver_interface) and issubclass(ilp_solver_interface, ILPPackageProblem)
-        problem_type = kwargs.get("problem_type", "auto")
+        problem_type = kwargs.get("problem_type", "lp")
+
 
         self.ilp_problem = ilp_solver_interface(
             search=self,

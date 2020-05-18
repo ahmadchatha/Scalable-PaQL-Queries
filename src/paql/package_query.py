@@ -34,6 +34,7 @@ class PaQLParserError(Exception):
 class PackageQuery(object):
     allowed_dbms_data_types = {
         "integer",
+        "real",
         "bigint",
         "double precision",
         # "numeric",
